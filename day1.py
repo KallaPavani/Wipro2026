@@ -1,7 +1,6 @@
 from functools import reduce
 
 # 1. range(): To generate numbers from 1 to 20
-
 numbers=list(range(1,20))
 print(numbers)
 
@@ -32,3 +31,5 @@ print(even_set)
 #3. Create a dictionary comprehension where the key is the number and the value is its cube
 dict_cube={x: x**3 for x in data}
 print(dict_cube)
+
+
