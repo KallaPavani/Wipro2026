@@ -1,0 +1,15 @@
+file=open('test.txt','r')
+content=file.read()
+print(content)
+content=file.readline()
+print(content)
+file.close()
+
+file=open('test.txt','a')
+file.write("\n New line added")
+file.close()
+
+file=open('test.txt','w')
+file.write("Hello Python \n")
+file.write("World")
+file.close()
