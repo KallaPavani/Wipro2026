@@ -160,6 +160,7 @@ def main():
     courses = []
 
     while True:
+        print("Smart University Management System")
         print("\n1  -> Add Student")
         print("2  -> Add Faculty")
         print("3  -> Add Course")

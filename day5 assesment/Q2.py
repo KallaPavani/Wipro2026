@@ -1,9 +1,9 @@
 class Calculator:
     def calculate(self,a,b):
-       print("Calculator result:",a+b)
+       print("calculator result:",a+b)
 class AdvancedCalculator(Calculator):
     def calculate(self,a,b):
-        print("Advanced Calculator result:",a*b)
+        print("Advanced calculator result:",a*b)
 
 class Box:
     def __init__(self,value):
