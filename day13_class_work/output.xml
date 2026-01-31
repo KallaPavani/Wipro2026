@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-30T17:53:45.856066" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 007 Register Excel" source="C:\Users\kalla\PycharmProjects\PythonProject\Robot_Framework\TC_007_Register_Excel.robot">
+<kw name="Open Register Page" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:53:49.149167" level="INFO">Opening browser 'chrome' to base url 'https://tutorialsninja.com/demo/index.php?route=account/register'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-30T17:53:49.148154" elapsed="2.940899"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-30T17:53:52.089053" elapsed="0.045087"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T17:53:57.135433" level="INFO">Slept 5 seconds.</msg>
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T17:53:52.135151" elapsed="5.000282"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=input-firstname</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T17:53:57.136451" elapsed="0.052953"/>
+</kw>
+<status status="PASS" start="2026-01-30T17:53:49.145325" elapsed="8.045085"/>
+</kw>
+<test id="s1-t1" name="Register Test Using Excel" line="38">
+<kw name="Register With Excel">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:53:57.195004" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-01-30T17:53:57.195004" elapsed="0.318334"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=input-firstname</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T17:53:57.513338" elapsed="0.030480"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:53:57.544815" level="INFO">Typing text 'Preeti' into text field 'id=input-firstname'.</msg>
+<arg>id=input-firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:53:57.543818" elapsed="0.207408"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:53:57.753304" level="INFO">Typing text 'Krishna' into text field 'id=input-lastname'.</msg>
+<arg>id=input-lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:53:57.752303" elapsed="0.166221"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:53:57.919523" level="INFO">Typing text 'preethi34@test.com' into text field 'id=input-email'.</msg>
+<arg>id=input-email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:53:57.919523" elapsed="0.206251"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:53:58.126787" level="INFO">Typing text '8677454210' into text field 'id=input-telephone'.</msg>
+<arg>id=input-telephone</arg>
+<arg>${telephone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:53:58.126787" elapsed="0.168921"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:53:58.296727" level="INFO">Typing text 'Test@123' into text field 'id=input-password'.</msg>
+<arg>id=input-password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:53:58.295708" elapsed="0.163731"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:53:58.460936" level="INFO">Typing text 'Test@123' into text field 'id=input-confirm'.</msg>
+<arg>id=input-confirm</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:53:58.459439" elapsed="0.173676"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T17:54:00.635305" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T17:53:58.634159" elapsed="2.001146"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:00.636452" level="INFO">Selecting checkbox 'name=agree'.</msg>
+<arg>name=agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:00.635305" elapsed="0.167677"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:00.804193" level="INFO">Clicking button 'xpath=//input[@value='Continue']'.</msg>
+<arg>xpath=//input[@value='Continue']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:00.804193" elapsed="1.002706"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T17:54:04.808273" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T17:54:01.807898" elapsed="3.000375"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your Account Has Been Created!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-30T17:54:04.808273" elapsed="0.020514"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:04.830827" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/logout'</msg>
+<arg>https://tutorialsninja.com/demo/index.php?route=account/logout</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-01-30T17:54:04.830313" elapsed="0.314003"/>
+</kw>
+<arg>firstname=Preeti</arg>
+<arg>lastname=Krishna</arg>
+<arg>email=preethi34@test.com</arg>
+<arg>telephone=8677454210</arg>
+<arg>password=Test@123</arg>
+<arg>confirm_password=Test@123</arg>
+<status status="PASS" start="2026-01-30T17:53:57.194004" elapsed="7.951335"/>
+</kw>
+<status status="PASS" start="2026-01-30T17:53:57.190410" elapsed="7.954929"/>
+</test>
+<test id="s1-t2" name="Register Test Using Excel" line="38">
+<kw name="Register With Excel">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:05.152707" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/register'</msg>
+<arg>${URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-01-30T17:54:05.151712" elapsed="0.266474"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=input-firstname</arg>
+<arg>15s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-30T17:54:05.418186" elapsed="0.029099"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:05.448300" level="INFO">Typing text 'Pallavi' into text field 'id=input-firstname'.</msg>
+<arg>id=input-firstname</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:05.448300" elapsed="0.164171"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:05.614002" level="INFO">Typing text 'Raju' into text field 'id=input-lastname'.</msg>
+<arg>id=input-lastname</arg>
+<arg>${lastname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:05.612985" elapsed="0.163218"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:05.777993" level="INFO">Typing text 'pallavi23@test.com' into text field 'id=input-email'.</msg>
+<arg>id=input-email</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:05.777993" elapsed="0.243195"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:06.022185" level="INFO">Typing text '8876534211' into text field 'id=input-telephone'.</msg>
+<arg>id=input-telephone</arg>
+<arg>${telephone}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:06.022185" elapsed="0.184788"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:06.208024" level="INFO">Typing text 'John@123' into text field 'id=input-password'.</msg>
+<arg>id=input-password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:06.206973" elapsed="0.139644"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:06.347759" level="INFO">Typing text 'John@123' into text field 'id=input-confirm'.</msg>
+<arg>id=input-confirm</arg>
+<arg>${confirm_password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:06.347759" elapsed="0.151211"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T17:54:08.500461" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T17:54:06.500222" elapsed="2.000239"/>
+</kw>
+<kw name="Select Checkbox" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:08.501507" level="INFO">Selecting checkbox 'name=agree'.</msg>
+<arg>name=agree</arg>
+<doc>Selects the checkbox identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:08.500461" elapsed="0.147324"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:08.647785" level="INFO">Clicking button 'xpath=//input[@value='Continue']'.</msg>
+<arg>xpath=//input[@value='Continue']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-30T17:54:08.647785" elapsed="0.134549"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-30T17:54:11.783856" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-30T17:54:08.782334" elapsed="3.002539"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Your Account Has Been Created!</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-30T17:54:11.784873" elapsed="0.039490"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-01-30T17:54:11.824363" level="INFO">Opening url 'https://tutorialsninja.com/demo/index.php?route=account/logout'</msg>
+<arg>https://tutorialsninja.com/demo/index.php?route=account/logout</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-01-30T17:54:11.824363" elapsed="0.404029"/>
+</kw>
+<arg>firstname=Pallavi</arg>
+<arg>lastname=Raju</arg>
+<arg>email=pallavi23@test.com</arg>
+<arg>telephone=8876534211</arg>
+<arg>password=John@123</arg>
+<arg>confirm_password=John@123</arg>
+<status status="PASS" start="2026-01-30T17:54:05.149666" elapsed="7.078726"/>
+</kw>
+<status status="PASS" start="2026-01-30T17:54:05.146339" elapsed="7.083055"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-01-30T17:54:12.230586" elapsed="2.482312"/>
+</kw>
+<status status="PASS" start="2026-01-30T17:53:45.861062" elapsed="28.852866"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC 007 Register Excel" id="s1" pass="2" fail="0" skip="0">TC 007 Register Excel</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-01-30T17:54:05.146339" level="WARN">Multiple tests with name 'Register Test Using Excel' executed in suite 'TC 007 Register Excel'.</msg>
+</errors>
+</robot>

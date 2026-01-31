@@ -1,13 +1,13 @@
 *** Settings ***
-Library    SeleniumLibrary
-Library    DataDriver    file=testdata.xlsx    sheet_name=Sheet1
-Test Template    OrangeHRM Login With Excel
-Suite Setup    Open OrangeHRM
-Suite Teardown    Close OrangeHRM
+Library   SeleniumLibrary
+Library   DataDriver    file=./testdata.xlsx    sheet_name=Sheet1
+Test Template   OrangeHRM Login With Excel
+Suite Setup     Open OrangeHRM
+Suite Teardown  Close OrangeHRM
 
 *** Variables ***
-${URL}       https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
-${BROWSER}   chrome
+${URL}      https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+${BROWSER}  chrome
 
 *** Keywords ***
 Open OrangeHRM
@@ -20,11 +20,11 @@ OrangeHRM Login With Excel
     Input Text    name=username    ${username}
     Input Text    name=password    ${password}
     Click Button    xpath=//button[@type='submit']
-    Wait Until Page Contains    Dashboard    timeout=10s
+    Wait Until Page Contains    Dashboard    10s
 
 Close OrangeHRM
     Close Browser
 
 *** Test Cases ***
 Login Test Using Excel
-    Log Exec
+      Log    Executed via DataDriver

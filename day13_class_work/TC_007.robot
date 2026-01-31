@@ -1,4 +1,4 @@
-*** Settings ***
+** Settings ***
 Library    SeleniumLibrary
 Library    DataDriver    file=testdata.xlsx    sheet_name=Sheet1
 Test Template    OrangeHRM Login With Excel
@@ -13,18 +13,26 @@ ${BROWSER}   chrome
 Open OrangeHRM
     Open Browser    ${URL}    ${BROWSER}
     Maximize Browser Window
-    Wait Until Element Is Visible    name=username    10s
 
 OrangeHRM Login With Excel
     [Arguments]    ${username}    ${password}
+    Wait Until Element Is Visible    name=username    15s
     Input Text    name=username    ${username}
     Input Text    name=password    ${password}
     Click Button    xpath=//button[@type='submit']
-    Wait Until Page Contains    Dashboard    timeout=10s
+    Wait Until Element Is Visible    xpath=//span[@class='oxd-userdropdown-tab']    15s
+    Capture Page Screenshot
+    Logout From OrangeHRM
+
+Logout From OrangeHRM
+    Click Element    xpath=//span[@class='oxd-userdropdown-tab']
+    Wait Until Element Is Visible    xpath=//a[text()='Logout']    10s
+    Click Element    xpath=//a[text()='Logout']
+    Wait Until Element Is Visible    name=username    15s
 
 Close OrangeHRM
     Close Browser
 
 *** Test Cases ***
-Login Test Using Excel
-    Log Exec
+Login with user from Excel
+    Log    Executed via DataDriver

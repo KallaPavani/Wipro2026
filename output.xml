@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-30T10:42:48.536477" rpa="false" schemaversion="5">
+<suite id="s1" name="TC 005 DataDriven" source="C:\Users\kalla\PycharmProjects\PythonProject\Robot_Framework\TC_005_DataDriven.robot">
+<test id="s1-t1" name="TC_005_DataDriven.robot" line="27">
+<kw name="open orangehrm">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-01-30T10:42:55.185978" level="INFO">Opening browser 'chrome' to base url 'https://opensource-demo.orangehrmlive.com/web/index.php/auth/login'.</msg>
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-01-30T10:42:55.184980" elapsed="8.959488"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-01-30T10:43:04.145930" elapsed="0.044704"/>
+</kw>
+<status status="PASS" start="2026-01-30T10:42:55.181897" elapsed="9.008737"/>
+</kw>
+<kw name="orangehrmlogin">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-01-30T10:43:04.200613" level="INFO">Typing text 'PavaniKalla' into text field 'name=username'.</msg>
+<msg time="2026-01-30T10:43:04.463306" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2026-01-30T10:43:04.463306" level="FAIL">Element with locator 'name=username' not found.</msg>
+<arg>name=username</arg>
+<arg>${Username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="FAIL" start="2026-01-30T10:43:04.195071" elapsed="0.424656">Element with locator 'name=username' not found.</status>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>name=password</arg>
+<arg>${Password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-30T10:43:04.621245" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-30T10:43:04.621905" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>.Robot_Framework/before_orangehrmlogin.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-01-30T10:43:04.621905" elapsed="0.000000"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<arg>xpath=//*[@id="app"]/div[1]/div/div[1]/div/div[2]/div[2]/form/div[3]/button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="NOT RUN" start="2026-01-30T10:43:04.621905" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-30T10:43:04.623031" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<arg>.Robot_Framework/after_orangehrmlogin.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="NOT RUN" start="2026-01-30T10:43:04.623031" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-30T10:43:04.623031" elapsed="0.000000"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2026-01-30T10:43:04.623031" elapsed="0.000000"/>
+</kw>
+<arg>${Username}</arg>
+<arg>${Password}</arg>
+<status status="FAIL" start="2026-01-30T10:43:04.193510" elapsed="0.429521">Element with locator 'name=username' not found.</status>
+</kw>
+<status status="FAIL" start="2026-01-30T10:42:55.180377" elapsed="9.444270">Element with locator 'name=username' not found.</status>
+</test>
+<status status="FAIL" start="2026-01-30T10:42:48.543388" elapsed="16.083802"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC 005 DataDriven" id="s1" pass="0" fail="1" skip="0">TC 005 DataDriven</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
