@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-31T23:27:34.707896" rpa="false" schemaversion="5">
+<suite id="s1" name="Environment Check" source="C:\Users\kalla\PycharmProjects\PythonProject\day12_assessment\Q2\environment_check.robot">
+<test id="s1-t1" name="Verify Environment Setup" line="6">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>==== Environment Verification Started ====</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.475622" elapsed="0.003267"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-31T23:27:35.478889" level="INFO">${python_version} = 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]</msg>
+<var>${python_version}</var>
+<arg>sys.version</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.478889" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-31T23:27:35.482597" level="INFO">Python Version: 3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]</msg>
+<arg>Python Version: ${python_version}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.478889" elapsed="0.003708"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Python is installed</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.482597" elapsed="0.000000"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-01-31T23:27:35.482597" level="INFO">${robot_version} = 7.4.1</msg>
+<var>${robot_version}</var>
+<arg>robot.__version__</arg>
+<arg>robot</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.482597" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-31T23:27:35.482597" level="INFO">Robot Framework Version: 7.4.1</msg>
+<arg>Robot Framework Version: ${robot_version}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.482597" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Robot Framework version: ${robot_version}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.487204" elapsed="0.000000"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-31T23:27:35.487204" level="INFO">SeleniumLibrary imported successfully</msg>
+<arg>SeleniumLibrary imported successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.487204" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>SeleniumLibrary is available</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.489273" elapsed="0.001159"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>==== Environment Verification completed successfully ====</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-31T23:27:35.490432" elapsed="0.001195"/>
+</kw>
+<status status="PASS" start="2026-01-31T23:27:35.463216" elapsed="0.028411"/>
+</test>
+<status status="PASS" start="2026-01-31T23:27:34.712083" elapsed="0.780914"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Environment Check" id="s1" pass="1" fail="0" skip="0">Environment Check</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

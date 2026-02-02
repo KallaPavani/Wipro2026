@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-02-02T18:24:02.650614" rpa="false" schemaversion="5">
+<suite id="s1" name="Setup Teardown Demo" source="C:\Users\kalla\PycharmProjects\PythonProject\day14_assessment\Q1\setup_teardown_demo.robot">
+<kw name="Open Browser Suite" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:03.401389" level="INFO">Opening browser 'chrome' to base url 'https://www.wikipedia.org'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-02T18:24:03.401389" elapsed="3.043077"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-02T18:24:06.445480" elapsed="1.263385"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:08.431227" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-02T18:24:07.708865" elapsed="0.723361"/>
+</kw>
+<status status="PASS" start="2026-02-02T18:24:03.399857" elapsed="5.033368"/>
+</kw>
+<test id="s1-t1" name="Valid Form Test" line="33">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T18:24:08.435239" level="INFO">Executing Valid Form Test</msg>
+<arg>Executing Valid Form Test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T18:24:08.435239" elapsed="0.001001"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:08.786261" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-02T18:24:08.437237" elapsed="0.349024"/>
+</kw>
+<tag>regression</tag>
+<tag>smoke</tag>
+<status status="PASS" start="2026-02-02T18:24:08.433225" elapsed="0.354044"/>
+</test>
+<test id="s1-t2" name="Another Simple Test" line="39">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T18:24:08.789269" level="INFO">Executing another test</msg>
+<arg>Executing another test</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T18:24:08.789269" elapsed="0.000000"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:09.013363" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-02T18:24:08.790780" elapsed="0.222583"/>
+</kw>
+<status status="PASS" start="2026-02-02T18:24:08.788269" elapsed="0.225094"/>
+</test>
+<kw name="Close Browser Suite" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:09.198168" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-02T18:24:09.016895" elapsed="0.182273"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-02T18:24:09.199168" elapsed="2.325802"/>
+</kw>
+<status status="PASS" start="2026-02-02T18:24:09.015883" elapsed="2.509087"/>
+</kw>
+<status status="PASS" start="2026-02-02T18:24:02.654140" elapsed="8.870830"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">regression</stat>
+<stat pass="1" fail="0" skip="0">smoke</stat>
+</tag>
+<suite>
+<stat name="Setup Teardown Demo" id="s1" pass="2" fail="0" skip="0">Setup Teardown Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

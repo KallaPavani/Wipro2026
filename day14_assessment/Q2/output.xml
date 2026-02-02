@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-02-02T18:24:50.877371" rpa="false" schemaversion="5">
+<suite id="s1" name="Browser Interaction" source="C:\Users\kalla\PycharmProjects\PythonProject\day14_assessment\Q2\browser_interaction.robot">
+<test id="s1-t1" name="Form Interaction Using Selenium" line="5">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:51.540413" level="INFO">Opening browser 'chrome' to base url 'https://formy-project.herokuapp.com/form'.</msg>
+<arg>https://formy-project.herokuapp.com/form</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-02-02T18:24:51.539422" elapsed="4.763289"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-02-02T18:24:56.302711" elapsed="0.039876"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:56.345117" level="INFO">Typing text 'Pavani' into text field 'id:first-name'.</msg>
+<arg>id:first-name</arg>
+<arg>Pavani</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T18:24:56.344097" elapsed="0.213795"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:56.558908" level="INFO">Typing text 'Kalla' into text field 'id:last-name'.</msg>
+<arg>id:last-name</arg>
+<arg>Kalla</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T18:24:56.558908" elapsed="0.131658"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:56.920320" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-02T18:24:56.691566" elapsed="0.228754"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:56.921338" level="INFO">Clicking element 'id:radio-button-2'.</msg>
+<arg>id:radio-button-2</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T18:24:56.921338" elapsed="0.101824"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:57.203611" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-02T18:24:57.023162" elapsed="0.180449"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:57.204611" level="INFO">Clicking element 'id:checkbox-1'.</msg>
+<arg>id:checkbox-1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-02-02T18:24:57.204611" elapsed="0.091093"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:57.450228" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-02T18:24:57.295704" elapsed="0.154524"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:57.451243" level="INFO">Selecting options from selection list 'id:select-menu' by value 2.</msg>
+<arg>id:select-menu</arg>
+<arg>2</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="PASS" start="2026-02-02T18:24:57.451243" elapsed="0.143138"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-02-02T18:24:57.816005" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-4.png"&gt;&lt;img src="selenium-screenshot-4.png" width="800px"&gt;&lt;/a&gt;</msg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-02-02T18:24:57.595385" elapsed="0.220620"/>
+</kw>
+<kw name="Run Keyword If" owner="BuiltIn">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T18:24:57.818028" level="INFO">Form filled successfully</msg>
+<arg>Form filled successfully</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T18:24:57.818028" elapsed="0.000000"/>
+</kw>
+<arg>'${True}'=='${True}'</arg>
+<arg>Log</arg>
+<arg>Form filled successfully</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<status status="PASS" start="2026-02-02T18:24:57.817017" elapsed="0.002012"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-02-02T18:24:57.819029" elapsed="2.307237"/>
+</kw>
+<status status="PASS" start="2026-02-02T18:24:51.538416" elapsed="8.587850"/>
+</test>
+<status status="PASS" start="2026-02-02T18:24:50.881605" elapsed="9.245661"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Browser Interaction" id="s1" pass="1" fail="0" skip="0">Browser Interaction</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

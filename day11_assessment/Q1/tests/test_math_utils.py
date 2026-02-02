@@ -1,7 +1,6 @@
 import pytest
 from ..math_utils import multiply, divide
 
-# 1️⃣ Parametrize multiple input combinations
 @pytest.mark.parametrize("a,b,expected", [
     (2, 3, 6),
     (5, 5, 25),
@@ -10,7 +9,6 @@ from ..math_utils import multiply, divide
 def test_multiply(a, b, expected):
     assert multiply(a, b) == expected
 
-# 4️⃣ Skip and xfail examples
 @pytest.mark.skip(reason="Not implemented yet")
 def test_future_feature():
     assert multiply(0, 0) == 0

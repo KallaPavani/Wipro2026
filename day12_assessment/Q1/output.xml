@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-01-31T23:22:46.962438" rpa="false" schemaversion="5">
+<suite id="s1" name="Basic Demo" source="C:\Users\kalla\PycharmProjects\PythonProject\day12_assessment\Q1\basic_demo.robot">
+<test id="s1-t1" name="Log Scalar Variables" line="10">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-31T23:22:47.878654" level="INFO">User Name is PavaniKalla</msg>
+<arg>User Name is ${NAME}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-31T23:22:47.860114" elapsed="0.018540"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-31T23:22:47.880539" level="INFO">User Role is Learner</msg>
+<arg>User Role is ${ROLE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-31T23:22:47.878654" elapsed="0.001885"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>Running test for ${NAME}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-31T23:22:47.880539" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-01-31T23:22:47.860114" elapsed="0.022928"/>
+</test>
+<test id="s1-t2" name="Log List Variables" line="16">
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-31T23:22:47.884746" level="INFO">User Skills are: ['Python', 'Selenium', 'Java']</msg>
+<arg>User Skills are: ${SKILLS}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-31T23:22:47.884746" elapsed="0.000000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>First skill is ${SKILLS}[0]</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-31T23:22:47.884746" elapsed="0.002000"/>
+</kw>
+<kw name="Log To Console" owner="BuiltIn">
+<arg>All skills are ${SKILLS}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2026-01-31T23:22:47.886746" elapsed="0.001477"/>
+</kw>
+<status status="PASS" start="2026-01-31T23:22:47.883042" elapsed="0.005181"/>
+</test>
+<status status="PASS" start="2026-01-31T23:22:46.966282" elapsed="0.923730"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Basic Demo" id="s1" pass="2" fail="0" skip="0">Basic Demo</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

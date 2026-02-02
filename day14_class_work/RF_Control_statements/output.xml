@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-02-02T11:17:37.444125" rpa="false" schemaversion="5">
+<suite id="s1" name="TC RUN Keyword UNLESS" source="C:\Users\kalla\PycharmProjects\PythonProject\day14_class_work\RF_Control_statements\TC_RUN_Keyword_UNLESS.robot">
+<test id="s1-t1" name="Run Keyword Unless Example" line="2">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-02-02T11:17:37.527515" level="INFO">${status} = FAIL</msg>
+<var>${status}</var>
+<arg>FAIL</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-02-02T11:17:37.527515" elapsed="0.000998"/>
+</kw>
+<kw name="Run Keyword Unless" owner="BuiltIn">
+<msg time="2026-02-02T11:17:37.528513" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-02-02T11:17:37.529516" level="INFO">Test Failed</msg>
+<arg>Test Failed</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-02-02T11:17:37.529516" elapsed="0.000000"/>
+</kw>
+<arg>'${status}' == 'PASS'</arg>
+<arg>Log</arg>
+<arg>Test Failed</arg>
+<doc>*DEPRECATED since RF 5.0. Use native IF/ELSE or `Run Keyword If` instead.*</doc>
+<status status="PASS" start="2026-02-02T11:17:37.528513" elapsed="0.001003"/>
+</kw>
+<status status="PASS" start="2026-02-02T11:17:37.526505" elapsed="0.004008"/>
+</test>
+<status status="PASS" start="2026-02-02T11:17:37.447649" elapsed="0.082864"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TC RUN Keyword UNLESS" id="s1" pass="1" fail="0" skip="0">TC RUN Keyword UNLESS</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-02-02T11:17:37.528513" level="WARN">Keyword 'BuiltIn.Run Keyword Unless' is deprecated. </msg>
+</errors>
+</robot>
