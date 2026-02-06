@@ -10,7 +10,7 @@ from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 
-class TestLab4():
+class TestLab3():
   def setup_method(self, method):
     self.driver = webdriver.Chrome()
     self.vars = {}
@@ -18,8 +18,8 @@ class TestLab4():
   def teardown_method(self, method):
     self.driver.quit()
   
-  def test_lab4(self):
-    self.driver.get("https://demo.opencart.com/")
+  def test_lab3(self):
+    self.driver.get("https://tutorialsninja.com/demo/")
     self.driver.set_window_size(1296, 688)
     assert self.driver.title == "Your Store"
     self.driver.find_element(By.LINK_TEXT, "Desktops").click()
@@ -27,14 +27,6 @@ class TestLab4():
     self.driver.find_element(By.ID, "input-sort").click()
     dropdown = self.driver.find_element(By.ID, "input-sort")
     dropdown.find_element(By.XPATH, "//option[. = 'Name (A - Z)']").click()
-    self.driver.execute_script("window.scrollTo(0,436)")
-    self.driver.find_element(By.CSS_SELECTOR, ".fa-shopping-cart").click()
-    self.driver.find_element(By.NAME, "search").click()
-    self.driver.find_element(By.NAME, "search").send_keys("Mobile")
-    self.driver.find_element(By.CSS_SELECTOR, ".fa-magnifying-glass").click()
-    time.sleep(2)
-    self.driver.find_element(By.NAME, "search").click()
-    self.driver.find_element(By.NAME, "search").send_keys(" ")
-    self.driver.find_element(By.ID, "input-description").click()
-    self.driver.find_element(By.ID, "button-search").click()
+    self.driver.find_element(By.CSS_SELECTOR, ".button-group .fa-shopping-cart").click()
+    self.driver.execute_script("window.scrollTo(0,333.3333435058594)")
   
