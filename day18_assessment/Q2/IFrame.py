@@ -1,48 +1,52 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 import time
 
-#1. Start Browser
 driver = webdriver.Chrome()
 driver.maximize_window()
+# Define a standard wait time
+wait = WebDriverWait(driver, 10)
 
-driver.get("https://letcode.in/frame")
+try:
+    driver.get("https://letcode.in/frame")
 
-#Switch to the first frame by index (0)
-driver.switch_to.frame(0)
+    # 1. Switch to iframe using a locator instead of index (more stable)
+    # Wait until the frame is available and switch to it
+    wait.until(EC.frame_to_be_available_and_switch_to_it((By.ID, "firstFr")))
 
-driver.find_element(By.NAME,"fname").send_keys("Pavani")
-driver.find_element(By.NAME, "lname").send_keys("Kalla")
+    # 2. Wait for elements inside the frame
+    fname = wait.until(EC.presence_of_element_located((By.NAME, "fname")))
+    fname.send_keys("Pavani")
+    driver.find_element(By.NAME, "lname").send_keys("Kalla")
 
-#Switch back to main page
-driver.switch_to.default_content()
-print("Switched back to main page")
+    # 3. Switch back
+    driver.switch_to.default_content()
 
+    # 4. Open new tab and wait for it to exist
+    parent_window = driver.current_window_handle
+    driver.execute_script("window.open('https://example.com', '_blank');")
 
-#Opening new tab using JS
-driver.execute_script("window.open('https://example.com', '_blank');")
-time.sleep(2)
+    # Wait until there are 2 windows open
+    wait.until(lambda d: len(d.window_handles) == 2)
 
-window_handles=driver.window_handles
-parent_window=driver.window_handles[0]
-child_window=driver.window_handles[1]
+    # Get the new handle dynamically
+    all_handles = driver.window_handles
+    child_window = [h for h in all_handles if h != parent_window][0]
 
-#Switch to child window and print title
-driver.switch_to.window(child_window)
-print("Child window title:", driver.title)
+    # 5. Switch and interact
+    driver.switch_to.window(child_window)
+    print("Child window title:", driver.title)
 
-#Switch to parent window and parent title
-driver.switch_to.window(parent_window)
-print("Parent window title:", driver.title)
+    driver.switch_to.window(parent_window)
+    print("Parent window title:", driver.title)
 
-#Close child window
-driver.switch_to.window(child_window)
-driver.close()
+    # 6. Clean up
+    driver.switch_to.window(child_window)
+    driver.close()
+    driver.switch_to.window(parent_window)
 
-#Return to parent window again
-driver.switch_to.window(parent_window)
-print("Returned to parent:", driver.title)
-
-time.sleep(2)
-driver.quit()
-
+finally:
+    time.sleep(2)
+    driver.quit()
