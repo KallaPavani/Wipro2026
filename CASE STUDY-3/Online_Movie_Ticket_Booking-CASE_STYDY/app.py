@@ -44,6 +44,17 @@ def delete_movie(movie_id):
             return jsonify({"message": "Deleted"}), 200
     return jsonify({"error": "Movie not found"}), 404
 
+@app.route("/api/movies/<int:movie_id>", methods=["PATCH"])
+def patch_movie(movie_id):
+    data = request.json
+    for movie in movies:
+        if movie["id"] == movie_id:
+            movie.update(data)
+            return jsonify(movie), 200
+    return jsonify({"error": "Movie not found"}), 404
+
+
+
 @app.route("/api/bookings", methods=["POST"])
 def book_ticket():
     data = request.json

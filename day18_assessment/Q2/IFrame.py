@@ -6,14 +6,12 @@ import time
 
 driver = webdriver.Chrome()
 driver.maximize_window()
-# Define a standard wait time
 wait = WebDriverWait(driver, 10)
 
 try:
     driver.get("https://letcode.in/frame")
 
     # 1. Switch to iframe using a locator instead of index (more stable)
-    # Wait until the frame is available and switch to it
     wait.until(EC.frame_to_be_available_and_switch_to_it((By.ID, "firstFr")))
 
     # 2. Wait for elements inside the frame
@@ -31,11 +29,9 @@ try:
     # Wait until there are 2 windows open
     wait.until(lambda d: len(d.window_handles) == 2)
 
-    # Get the new handle dynamically
     all_handles = driver.window_handles
     child_window = [h for h in all_handles if h != parent_window][0]
 
-    # 5. Switch and interact
     driver.switch_to.window(child_window)
     print("Child window title:", driver.title)
 
