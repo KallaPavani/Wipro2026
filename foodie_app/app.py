@@ -8,11 +8,35 @@ users=[]
 orders=[]
 ratings=[]
 
-restaurants_id_counter=1
-dish_id_counter=1
-user_id_counter=1
-order_id_counter=1
-rating_id_counter=1
+restaurants_id_counter = 1
+dish_id_counter = 1
+user_id_counter = 1
+order_id_counter = 1
+rating_id_counter = 1
+
+
+# ============================== RESET MODULE ==============================
+@app.route("/api/v1/reset", methods=["POST"])
+def reset():
+    global restaurants, dishes, users, orders, ratings
+    global restaurants_id_counter, dish_id_counter
+    global user_id_counter, order_id_counter, rating_id_counter
+
+    restaurants.clear()
+    dishes.clear()
+    users.clear()
+    orders.clear()
+    ratings.clear()
+
+    # IMPORTANT: Reset ID counters also
+    restaurants_id_counter = 1
+    dish_id_counter = 1
+    user_id_counter = 1
+    order_id_counter = 1
+    rating_id_counter = 1
+
+    return jsonify({"message": "Reset successful"}), 200
+
 
 #============================== Restaurant Module ==============================================
 #1. Register Restaurant
@@ -145,6 +169,46 @@ def delete_dish(dish_id):
             return jsonify({"message": "Dish deleted"}), 200
 
     return jsonify({"error": "Dish not found"}), 404
+
+#5. Get all Dishes
+@app.route("/api/v1/dishes", methods=["GET"])
+def get_all_dishes():
+    return jsonify(dishes), 200
+
+#6. Get Single Dish by ID
+@app.route("/api/v1/dishes/<int:dish_id>", methods=["GET"])
+def get_dish(dish_id):
+    for dish in dishes:
+        if dish["id"] == dish_id:
+            return jsonify(dish), 200
+
+    return jsonify({"error": "Dish not found"}), 404
+
+@app.route("/api/v1/dishes", methods=["POST"])
+def add_dish_direct():
+    global dish_id_counter
+    data = request.get_json()
+
+    restaurant_id = data.get("restaurant_id")
+
+    # Validate restaurant
+    if not any(r["id"] == restaurant_id for r in restaurants):
+        return jsonify({"error": "restaurant not found"}), 404
+
+    new_dish = {
+        "id": dish_id_counter,
+        "restaurant_id": restaurant_id,
+        "name": data.get("name"),
+        "price": data.get("price"),
+        "enabled": True
+    }
+
+    dishes.append(new_dish)
+    dish_id_counter += 1
+    return jsonify(new_dish), 201
+
+
+
 
 #================================================User Module ==========================================================
 #1.Register User

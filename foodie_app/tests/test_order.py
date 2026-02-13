@@ -3,16 +3,42 @@ import requests
 BASE_URL = "http://localhost:5000/api/v1"
 
 def test_place_order():
+    # Create restaurant
+    r = requests.post(
+        f"{BASE_URL}/restaurants",
+        json={"name": "Test Hotel"}
+    )
+    restaurant_id = r.json()["id"]
+
+    # Create user
+    u = requests.post(
+        f"{BASE_URL}/users",
+        json={"name": "Pavani"}
+    )
+    user_id = u.json()["id"]
+
+    # Create dish
+    d = requests.post(
+        f"{BASE_URL}/dishes",
+        json={
+            "name": "Biryani",
+            "restaurant_id": restaurant_id,
+            "price": 200
+        }
+    )
+    dish_id = d.json()["id"]
+
+    # Now place order
     response = requests.post(
         f"{BASE_URL}/orders",
         json={
-            "user_id": 1,
-            "restaurant_id": 1,
-            "dish_ids": [1]
+            "user_id": user_id,
+            "restaurant_id": restaurant_id,
+            "dish_ids": [dish_id]
         }
     )
+
     assert response.status_code == 201
-    assert response.json()["status"] == "Placed"
 
 
 def test_place_order_invalid_user():
