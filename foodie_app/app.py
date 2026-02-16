@@ -253,7 +253,13 @@ def place_order():
 
     user_id=data.get("user_id")
     restaurant_id=data.get("restaurant_id")
-    dish_ids=data.get("dish_ids")
+    dish_ids = data.get("dish_ids", [])
+
+    if isinstance(dish_ids, str):
+        dish_ids = [int(d.strip()) for d in dish_ids.split(",")]
+
+    if not isinstance(dish_ids, list):
+        return jsonify({"error": "Invalid dish_ids"}), 400
 
     #Validate user
     if not any(u["id"]==user_id for u in users):
@@ -267,7 +273,7 @@ def place_order():
     selected_dishes = [d for d in dishes if d["id"] in dish_ids]
     if not selected_dishes:
         return jsonify({"error": "dish not found"}), 400
-    total_price = sum(d["price"] for d in selected_dishes)
+    total_price = sum(int(d["price"]) for d in selected_dishes)
 
     order={
         "id": order_id_counter,
