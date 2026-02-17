@@ -1,0 +1,16 @@
+{
+  "registration": {
+    "first_name": "Pavani",
+    "last_name": "Krishna",
+    "password": "Test@123"
+  },
+
+  "login": {
+    "email": "kallapavani023@gmail.com",
+    "password": "test@123"
+  },
+
+  "search": {
+    "product": "Diamond Tennis Bracelet"
+  }
+}

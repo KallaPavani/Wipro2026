@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
+
 restaurants= []
 dishes=[]
 users=[]
@@ -14,6 +15,9 @@ user_id_counter = 1
 order_id_counter = 1
 rating_id_counter = 1
 
+@app.route("/")
+def home():
+    return "Welcome to Foodie_App......"
 
 # ============================== RESET MODULE ==============================
 @app.route("/api/v1/reset", methods=["POST"])
