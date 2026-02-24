@@ -1,5 +1,5 @@
-import pytest
+import tests_suite
 
-@pytest.fixture
+@tests_suite.fixture
 def base_url():
     return "http://127.0.0.1:5002"

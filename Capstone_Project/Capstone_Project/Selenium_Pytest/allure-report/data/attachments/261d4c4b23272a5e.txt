@@ -1,0 +1,57 @@
+2026-02-22 15:58:05 [[32mINFO[0m] WebDriver started: edge
+2026-02-22 15:58:08 [[32mINFO[0m] Attempting registration for pavani99@mailtest.com
+2026-02-22 15:58:09 [[32mINFO[0m] Clicked: (xpath, //a[text()='Register'])
+2026-02-22 15:58:10 [[32mINFO[0m] Clicked: (id, gender-female)
+2026-02-22 15:58:10 [[32mINFO[0m] Typed 'kalla' into (id, FirstName)
+2026-02-22 15:58:10 [[32mINFO[0m] Typed 'Pavani' into (id, LastName)
+2026-02-22 15:58:11 [[32mINFO[0m] Typed 'pavani99@mailtest.com' into (id, Email)
+2026-02-22 15:58:11 [[32mINFO[0m] Typed 'Pass@5678' into (id, Password)
+2026-02-22 15:58:11 [[32mINFO[0m] Typed 'Pass@5678' into (id, ConfirmPassword)
+2026-02-22 15:58:13 [[32mINFO[0m] Clicked: (id, register-button)
+2026-02-22 15:58:13 [[33mWARNING[0m] Email already registered: pavani99@mailtest.com — skipping to login
+2026-02-22 15:58:13 [[32mINFO[0m] Registration result for pavani99@mailtest.com: already_exists
+2026-02-22 15:58:14 [[32mINFO[0m] Auto-session detected — logging out to show fresh login
+2026-02-22 15:58:15 [[32mINFO[0m] Logout via direct /logout URL navigation
+2026-02-22 15:58:16 [[32mINFO[0m] Navigating to login page for pavani99@mailtest.com
+2026-02-22 15:58:17 [[32mINFO[0m] Clicked: (xpath, //a[text()='Log in'])
+2026-02-22 15:58:17 [[32mINFO[0m] Typed 'pavani99@mailtest.com' into (id, Email)
+2026-02-22 15:58:18 [[32mINFO[0m] Typed 'Pass@5678' into (id, Password)
+2026-02-22 15:58:19 [[32mINFO[0m] Clicked: (xpath, //input[@value='Log in'])
+2026-02-22 15:58:19 [[32mINFO[0m] Text='pavani99@mailtest.com' from (css selector, a.account)
+2026-02-22 15:58:19 [[32mINFO[0m] Login successful. Account header: 'pavani99@mailtest.com'
+2026-02-22 15:58:21 [[32mINFO[0m] Cart is already empty — nothing to clear
+2026-02-22 15:58:22 [[32mINFO[0m] SEARCH: 'Computing and Internet' 
+2026-02-22 15:58:22 [[32mINFO[0m] Typed 'Computing and Internet' into (id, small-searchterms)
+2026-02-22 15:58:24 [[32mINFO[0m] Clicked: (xpath, //input[@value='Search'])
+2026-02-22 15:58:24 [[32mINFO[0m] Search submitted – on results page
+2026-02-22 15:58:24 [[32mINFO[0m] 2 search result(s) found
+2026-02-22 15:58:24 [[32mINFO[0m] Product titles on page: ['Computing and Internet', 'Copy of Computing and Internet EX']
+2026-02-22 15:58:26 [[32mINFO[0m] Clicked product: 'Computing and Internet'
+2026-02-22 15:58:26 [[32mINFO[0m] Text='Computing and Internet' from (css selector, div.product-name h1)
+2026-02-22 15:58:26 [[32mINFO[0m] On product detail page: 'Computing and Internet'
+2026-02-22 15:58:26 [[32mINFO[0m] Text='10.00' from (css selector, div.product-price span)
+2026-02-22 15:58:26 [[32mINFO[0m] Product price: 10.00
+2026-02-22 15:58:26 [[32mINFO[0m] ADD TO CART (qty=1)
+2026-02-22 15:58:26 [[32mINFO[0m] Typed '1' into (css selector, input.qty-input)
+2026-02-22 15:58:26 [[32mINFO[0m] Quantity set to 1
+2026-02-22 15:58:26 [[32mINFO[0m] Clicked: (xpath, //input[@value='Add to cart'])
+2026-02-22 15:58:27 [[32mINFO[0m] Text='The product has been added to your shopping cart' from (css selector, div.bar-notification.success p.content)
+2026-02-22 15:58:27 [[32mINFO[0m]  Added to cart. Notification: 'The product has been added to your shopping cart'
+2026-02-22 15:58:28 [[32mINFO[0m] Clicked: (xpath, //a[text()='shopping cart'])
+2026-02-22 15:58:28 [[32mINFO[0m] Navigated to shopping cart
+2026-02-22 15:58:28 [[32mINFO[0m] Cart has 1 item(s)
+2026-02-22 15:58:28 [[32mINFO[0m] Product 'Computing and Internet' confirmed in cart
+2026-02-22 15:58:28 [[32mINFO[0m] UPDATE CART QTY to 2 (index 0)
+2026-02-22 15:58:28 [[32mINFO[0m] Cart has 1 item(s)
+2026-02-22 15:58:29 [[32mINFO[0m] Clicked: (xpath, //input[@name='updatecart'])
+2026-02-22 15:58:31 [[32mINFO[0m] Quantity at index 0 confirmed: 2
+2026-02-22 15:58:31 [[32mINFO[0m] Cart quantity updated to 2
+2026-02-22 15:58:31 [[32mINFO[0m] Quantity at index 0 confirmed: 2
+2026-02-22 15:58:31 [[32mINFO[0m] REMOVE ITEM (index 0)
+2026-02-22 15:58:31 [[32mINFO[0m] Cart has 1 item(s)
+2026-02-22 15:58:32 [[32mINFO[0m] Remove checkbox checked
+2026-02-22 15:58:32 [[32mINFO[0m] Clicked: (xpath, //input[@name='updatecart'])
+2026-02-22 15:58:35 [[32mINFO[0m] Item removed. Cart count: 1 to 0
+2026-02-22 15:58:35 [[32mINFO[0m] Cart is now empty
+2026-02-22 15:58:37 [[32mINFO[0m] Logout via direct /logout URL navigation
+2026-02-22 15:58:37 [[32mINFO[0m] Test complete for pavani99@mailtest.com

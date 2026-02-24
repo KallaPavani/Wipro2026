@@ -1,0 +1,6 @@
+firstname,lastname,email,password,confirm_password,gender,search_item,quantity
+Rohith,V.H,rohith@test.com,Test@123,Test@123,Male,14.1-inch Laptop,2
+Pavani,Kalla,pavani@test.com,Test@456,Test@456,Female,,1
+Sana,Bano,sana@test.com,Test@789,Test@789,Female,Music 2,3
+Sree Bhargav Reddy,Daggula,bhargav@test.com,Hello@123,Hello@123,Male,Fiction,1
+Amulya Rani,Noonela,amulya@test.com,Hello@456,Hello@456,Female,Black & White Diamond Heart,5

@@ -1,6 +1,6 @@
-import pytest
+import tests_suite
 
-@pytest.fixture
+@tests_suite.fixture
 def data():
     return [1,2,3]
 

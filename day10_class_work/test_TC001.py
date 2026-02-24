@@ -1,4 +1,4 @@
-import pytest
+import tests_suite
 def test_add():
     assert 4+7==11
 

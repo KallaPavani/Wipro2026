@@ -1,0 +1,683 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.11.9 on win32)" generated="2026-02-22T09:31:24.271477" rpa="false" schemaversion="5">
+<suite id="s1" name="E2E flow" source="C:\Users\kalla\PycharmProjects\PythonProject\tricentis_project\robot\tests\E2E_flow.robot">
+<test id="s1-t1" name="Complete E2E Flow for Rohith" line="19">
+<kw name="Open Browser To Application" owner="common" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER}' == 'chrome'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.919195" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.919195" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.919195" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.920195" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.917199" elapsed="0.002996"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'edge'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.920195" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.920195" elapsed="0.001002"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.921197" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Edge</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.921197" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.920195" elapsed="0.001002"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'firefox'">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-22T09:31:24.922207" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x0000023608CCAA50&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.922207" elapsed="0.000000"/>
+</kw>
+<kw name="Set Attribute">
+<msg time="2026-02-22T09:31:24.926205" level="FAIL">No keyword with name 'Set Attribute' found.</msg>
+<arg>${options}</arg>
+<arg>accept_insecure_certs</arg>
+<arg>True</arg>
+<status status="FAIL" start="2026-02-22T09:31:24.926205" elapsed="0.000000">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Firefox</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.926205" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.921197" elapsed="0.006008">No keyword with name 'Set Attribute' found.</status>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Unsupported browser: ${BROWSER}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.927205" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.927205" elapsed="0.000000"/>
+</branch>
+<status status="FAIL" start="2026-02-22T09:31:24.917199" elapsed="0.010006">No keyword with name 'Set Attribute' found.</status>
+</if>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.927205" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.927205" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.928207" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.928207" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.928207" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.917199" elapsed="0.011008">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Close Browser Session" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.929203" elapsed="0.001000"/>
+</kw>
+<status status="PASS" start="2026-02-22T09:31:24.929203" elapsed="0.001000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.914198" elapsed="0.016005">Setup failed:
+No keyword with name 'Set Attribute' found.</status>
+</test>
+<test id="s1-t2" name="Complete E2E Flow for Pavani" line="19">
+<kw name="Open Browser To Application" owner="common" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER}' == 'chrome'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.934198" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.934198" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.934198" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.934198" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.933200" elapsed="0.000998"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'edge'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.935200" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.936201" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.936201" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Edge</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.936201" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.934198" elapsed="0.002003"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'firefox'">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-22T09:31:24.937208" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x000002360A4CDED0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.937208" elapsed="0.000000"/>
+</kw>
+<kw name="Set Attribute">
+<msg time="2026-02-22T09:31:24.941201" level="FAIL">No keyword with name 'Set Attribute' found.</msg>
+<arg>${options}</arg>
+<arg>accept_insecure_certs</arg>
+<arg>True</arg>
+<status status="FAIL" start="2026-02-22T09:31:24.941201" elapsed="0.000000">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Firefox</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.941201" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.936201" elapsed="0.005000">No keyword with name 'Set Attribute' found.</status>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Unsupported browser: ${BROWSER}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.942206" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.942206" elapsed="0.000000"/>
+</branch>
+<status status="FAIL" start="2026-02-22T09:31:24.933200" elapsed="0.009006">No keyword with name 'Set Attribute' found.</status>
+</if>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.942206" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.942206" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.943201" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.943201" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.943201" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.933200" elapsed="0.010001">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Close Browser Session" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.945201" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-22T09:31:24.944200" elapsed="0.001001"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.931203" elapsed="0.013998">Setup failed:
+No keyword with name 'Set Attribute' found.</status>
+</test>
+<test id="s1-t3" name="Complete E2E Flow for Sana" line="19">
+<kw name="Open Browser To Application" owner="common" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER}' == 'chrome'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.949205" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.949205" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.949205" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.949205" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.948206" elapsed="0.000999"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'edge'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.950204" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.950204" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.950204" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Edge</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.950204" elapsed="0.001000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.950204" elapsed="0.001000"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'firefox'">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-22T09:31:24.952203" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x000002360A4DB010&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.951204" elapsed="0.000999"/>
+</kw>
+<kw name="Set Attribute">
+<msg time="2026-02-22T09:31:24.957214" level="FAIL">No keyword with name 'Set Attribute' found.</msg>
+<arg>${options}</arg>
+<arg>accept_insecure_certs</arg>
+<arg>True</arg>
+<status status="FAIL" start="2026-02-22T09:31:24.957214" elapsed="0.000000">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Firefox</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.958213" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.951204" elapsed="0.007009">No keyword with name 'Set Attribute' found.</status>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Unsupported browser: ${BROWSER}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.958213" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.958213" elapsed="0.000000"/>
+</branch>
+<status status="FAIL" start="2026-02-22T09:31:24.948206" elapsed="0.011007">No keyword with name 'Set Attribute' found.</status>
+</if>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.959213" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.959213" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.959213" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.959213" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.960213" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.948206" elapsed="0.012007">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Close Browser Session" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.961212" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-22T09:31:24.961212" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.946207" elapsed="0.016008">Setup failed:
+No keyword with name 'Set Attribute' found.</status>
+</test>
+<test id="s1-t4" name="Complete E2E Flow for Sree Bhargav Reddy" line="19">
+<kw name="Open Browser To Application" owner="common" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER}' == 'chrome'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.965219" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.965219" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.965219" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.966220" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.964218" elapsed="0.002002"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'edge'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.966220" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.966220" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.966220" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Edge</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.967218" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.966220" elapsed="0.000998"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'firefox'">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-22T09:31:24.969216" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x000002360A4B54D0&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.968215" elapsed="0.001001"/>
+</kw>
+<kw name="Set Attribute">
+<msg time="2026-02-22T09:31:24.972518" level="FAIL">No keyword with name 'Set Attribute' found.</msg>
+<arg>${options}</arg>
+<arg>accept_insecure_certs</arg>
+<arg>True</arg>
+<status status="FAIL" start="2026-02-22T09:31:24.972518" elapsed="0.000000">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Firefox</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.972518" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.967218" elapsed="0.005300">No keyword with name 'Set Attribute' found.</status>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Unsupported browser: ${BROWSER}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.973570" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.972518" elapsed="0.001052"/>
+</branch>
+<status status="FAIL" start="2026-02-22T09:31:24.964218" elapsed="0.009352">No keyword with name 'Set Attribute' found.</status>
+</if>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.973570" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.973570" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.973570" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.974517" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.974517" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.964218" elapsed="0.010299">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Close Browser Session" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.975515" elapsed="0.000999"/>
+</kw>
+<status status="PASS" start="2026-02-22T09:31:24.975515" elapsed="0.000999"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.962215" elapsed="0.014299">Setup failed:
+No keyword with name 'Set Attribute' found.</status>
+</test>
+<test id="s1-t5" name="Complete E2E Flow for Amulya Rani" line="19">
+<kw name="Open Browser To Application" owner="common" type="SETUP">
+<if>
+<branch type="IF" condition="'${BROWSER}' == 'chrome'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].ChromeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.980518" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.980518" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.980518" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Chrome</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.980518" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.979514" elapsed="0.001004"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'edge'">
+<kw name="Evaluate" owner="BuiltIn">
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].EdgeOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.981520" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--ignore-certificate-errors</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.981520" elapsed="0.000000"/>
+</kw>
+<kw name="Call Method" owner="BuiltIn">
+<arg>${options}</arg>
+<arg>add_argument</arg>
+<arg>--allow-insecure-localhost</arg>
+<doc>Calls the named method of the given object with the provided arguments.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.981520" elapsed="0.000000"/>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Edge</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.981520" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.980518" elapsed="0.002004"/>
+</branch>
+<branch type="ELSE IF" condition="'${BROWSER}' == 'firefox'">
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-02-22T09:31:24.983517" level="INFO">${options} = &lt;selenium.webdriver.firefox.options.Options object at 0x000002360A4D8890&gt;</msg>
+<var>${options}</var>
+<arg>sys.modules['selenium.webdriver'].FirefoxOptions()</arg>
+<arg>sys</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.982522" elapsed="0.000995"/>
+</kw>
+<kw name="Set Attribute">
+<msg time="2026-02-22T09:31:24.986521" level="FAIL">No keyword with name 'Set Attribute' found.</msg>
+<arg>${options}</arg>
+<arg>accept_insecure_certs</arg>
+<arg>True</arg>
+<status status="FAIL" start="2026-02-22T09:31:24.986521" elapsed="0.000000">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Create Webdriver" owner="SeleniumLibrary">
+<arg>Firefox</arg>
+<arg>options=${options}</arg>
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.987562" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.982522" elapsed="0.005040">No keyword with name 'Set Attribute' found.</status>
+</branch>
+<branch type="ELSE">
+<kw name="Fail" owner="BuiltIn">
+<arg>Unsupported browser: ${BROWSER}</arg>
+<doc>Fails the test with the given message and optionally alters its tags.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.987562" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2026-02-22T09:31:24.987562" elapsed="0.000000"/>
+</branch>
+<status status="FAIL" start="2026-02-22T09:31:24.979514" elapsed="0.008048">No keyword with name 'Set Attribute' found.</status>
+</if>
+<kw name="Go To" owner="SeleniumLibrary">
+<arg>${BASE_URL}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.987562" elapsed="0.000000"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.988522" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Timeout" owner="SeleniumLibrary">
+<arg>10s</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.988522" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Implicit Wait" owner="SeleniumLibrary">
+<arg>2s</arg>
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.988522" elapsed="0.000000"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>0</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="NOT RUN" start="2026-02-22T09:31:24.988522" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.979514" elapsed="0.009008">No keyword with name 'Set Attribute' found.</status>
+</kw>
+<kw name="Close Browser Session" owner="common" type="TEARDOWN">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-02-22T09:31:24.990523" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2026-02-22T09:31:24.989526" elapsed="0.000997"/>
+</kw>
+<status status="FAIL" start="2026-02-22T09:31:24.977513" elapsed="0.013010">Setup failed:
+No keyword with name 'Set Attribute' found.</status>
+</test>
+<status status="FAIL" start="2026-02-22T09:31:24.275434" elapsed="0.716088"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="5" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="E2E flow" id="s1" pass="0" fail="5" skip="0">E2E flow</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

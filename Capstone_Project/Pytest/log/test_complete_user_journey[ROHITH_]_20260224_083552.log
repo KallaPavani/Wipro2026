@@ -1,0 +1,10 @@
+2026-02-24 08:35:52,221 - INFO - ===== Starting Complete User Journey Test =====
+2026-02-24 08:35:52,222 - INFO - Clicking Register
+2026-02-24 08:35:53,078 - INFO - Generated email: user_b3df05c4-2fc4-43a3-82b6-32c7166a036c@test.com
+2026-02-24 08:35:53,078 - INFO - Registering new user
+2026-02-24 08:35:55,434 - INFO - Registration successful
+2026-02-24 08:35:55,434 - INFO - Logging out after registration
+2026-02-24 08:35:56,715 - INFO - Clicking Login
+2026-02-24 08:35:57,239 - INFO - Logging in with registered credentials
+2026-02-24 08:35:58,364 - INFO - Login successful
+2026-02-24 08:35:58,364 - INFO - Searching product: 

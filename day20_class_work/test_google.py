@@ -1,4 +1,4 @@
-import pytest
+import tests_suite
 import time
 import random
 import logging
@@ -21,7 +21,7 @@ logging.basicConfig(
 logger = logging.getLogger()
 
 
-@pytest.mark.parametrize("browser", ["chrome", "edge"])
+@tests_suite.mark.parametrize("browser", ["chrome", "edge"])
 def test_google_title(browser):
     logger.info(f"STARTING: Title Test on {browser}")
     driver = get_driver(browser)
@@ -35,7 +35,7 @@ def test_google_title(browser):
         driver.quit()
 
 
-@pytest.mark.parametrize("browser", ["chrome", "edge"])
+@tests_suite.mark.parametrize("browser", ["chrome", "edge"])
 def test_google_search(browser):
     logger.info(f"STARTING: Search Test on {browser}")
     driver = get_driver(browser)

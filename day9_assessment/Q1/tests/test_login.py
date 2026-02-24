@@ -1,4 +1,4 @@
-import pytest
+import tests_suite
 from day9_assessment.Q1.utilities.calculator import Calculator
 
 def test_addition():
@@ -11,5 +11,5 @@ def test_division():
 
 def test_division_by_zero():
     calc = Calculator()
-    with pytest.raises(ValueError):
+    with tests_suite.raises(ValueError):
         calc.divide(10, 0)

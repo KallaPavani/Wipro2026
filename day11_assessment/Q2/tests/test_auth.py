@@ -1,4 +1,4 @@
-import pytest
+import tests_suite
 from ..auth import login
 
 

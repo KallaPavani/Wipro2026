@@ -1,4 +1,4 @@
-import pytest
+import tests_suite
 from ..calculator import add,sub,mul,div
 
 def test_add():
@@ -11,5 +11,5 @@ def test_mul():
     assert mul(3,4) == 12
 
 def test_divide_by_zero():
-    with pytest.raises(ZeroDivisionError):
+    with tests_suite.raises(ZeroDivisionError):
         div(3,0)

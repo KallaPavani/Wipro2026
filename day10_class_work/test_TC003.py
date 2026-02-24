@@ -1,10 +1,10 @@
-import pytest
+import tests_suite
 
-@pytest.mark.smoke
+@tests_suite.mark.smoke
 def test_smoke():
     assert True
 
-@pytest.fixture()
+@tests_suite.fixture()
 def setup_teardown():
     print("setup")
     yield

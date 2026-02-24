@@ -1,4 +1,4 @@
-import pytest
+import tests_suite
 
 # Module-level setup/teardown
 def setup_module(module):
@@ -25,9 +25,9 @@ def test_get_balance(account_function):
     assert account_function.get_balance() == 100
 
 def test_deposit_negative(account_function):
-    with pytest.raises(ValueError):
+    with tests_suite.raises(ValueError):
         account_function.deposit(-20)
 
 def test_withdraw_insufficient(account_function):
-    with pytest.raises(ValueError):
+    with tests_suite.raises(ValueError):
         account_function.withdraw(200)
